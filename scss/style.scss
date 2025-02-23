@@ -1,0 +1,13 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/base";
+
+@import "./layouts/header";
+@import "./layouts/main";
+@import "./layouts/footer";
+
+@import "./components/wellcome";
+@import "./components/persons";

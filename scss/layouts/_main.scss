@@ -1,0 +1,11 @@
+h2 {
+    font-family: $second-family;
+    font-size: 2.25rem;
+    line-height: 120%;
+    color: var(--blue);
+
+    @include sm-down {
+        font-size: 1.3125rem;
+        line-height: 133%;
+    }
+}

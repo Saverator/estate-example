@@ -1,0 +1,102 @@
+.persons {
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+
+    @include lg-down {
+        justify-content: space-around;
+    }
+
+    @include sm-down {
+        gap: 20px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.person {
+    position: relative;
+    border-radius: 16px 16px 0 0;
+    overflow: hidden;
+    height: 360px;
+    box-shadow: 0 14px 44px 0 rgba(125, 140, 180, 0.07);
+
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 290px;
+        height: 260px;
+        overflow: hidden;
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            transition: all .5s;
+
+            &:hover {
+                width: 110%;
+                height: 110%;
+                transition: all .5s;
+            }
+        }
+    }
+
+    figcaption {
+        padding: 13px 15px 37px;
+
+        @include sm-down {
+            padding-bottom: 13px;
+        }
+
+        p {
+            font-family: $second-family;
+            font-size: 1.125rem;
+            line-height: 167%;
+            text-align: center;
+            color: var(--dark);
+
+            &:last-child {
+                font-size: 0.875rem;
+                line-height: 143%;
+                color: #7d8cb4;
+            }
+        }
+    }
+
+    &__socials {
+        position: absolute;
+        inset: 20px auto auto 20px;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            text-decoration: none;
+
+            img {
+                width: 21px;
+                height: 21px;
+                transition: .3s all;
+
+                &:hover {
+                    width: 25px;
+                    height: 24px;
+                    transition: .3s all;
+                }
+            }
+        }
+    }
+}
